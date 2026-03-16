@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+font-family: "Montserrat", sans-serif;
+width: 100%;
+font-size: 16px;
+font-weight: 400 ;
+color: white;
+}
+header {
+    height: 5vh;
+    width: 90%;
+    background-color: #1A1A1B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position: sticky;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    
+}
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+    margin-right: 25px;
+}
+.logo{
+   font-family: "Montserrat", sans-serif;
+   font-size: 24px;
+   font-weight: 700;
+}
+.logo span {
+  color: #ffd700;
+}
+.roz {
+    background-color: #FFD700;
+    width: auto;
+    height: auto;
+    font-size: 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    padding: 8px 20px;
+    color: #000;
+    border: none;
+    white-space: nowrap;
+    cursor: pointer;
+}
+a:hover{
+    color: #646464;
+    font-weight: 600;
+}
+.roz:hover{
+    color: black;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+  font-weight: 700;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    backdrop-filter: blur(5px);
+}
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    font-family: sans-serif;
+    animation: modalFadeIn 0.3s ease-out;}
+
+    @keyframes modalFadeIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.close-button {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+.close-button:hover { color: #ffd700; }
+.form-group { margin-bottom: 20px; }
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #1a1a1b;
+    font-weight: 600;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; 
+}
+.btn-submit {
+    width: 100%;
+    background-color: #ffd700;
+    color: #1a1a1b;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+.btn-submit:hover { background-color: #e6c200; transform: translateY(-2px); }
+textarea {
+    resize: none;}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+    .main-footer {
+  background-color: #1a1a1b; 
+  color: #ffffff;
+  padding: 80px 0 20px 0;
+  font-family: 'Inter', sans-serif;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; 
+  gap: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-logo {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+.footer-logo span {
+  color: #ffd700; 
+}
+.footer-col p {
+  color: #aaaaaa;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+.footer-col h4 {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #ffffff;
+  position: relative;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+.footer-col ul li a {
+  color: #aaaaaa;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footer-col ul li a:hover {
+  color: #ffd700;
+  padding-left: 5px;
+}
+.contact-list li {
+  color: #aaaaaa;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+.social-links a {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8rem;
+  transition: 0.3s;
+}
+.social-links a:hover {
+  background: #ffd700;
+  color: #1a1a1b;
+  transform: translateY(-3px);
+}
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  color: #666666;
+  font-size: 0.85rem;
+}
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    backdrop-filter: blur(5px);
+}
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    font-family: sans-serif;
+    animation: modalFadeIn 0.3s ease-out;
+}
+@keyframes modalFadeIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+
+.services {
+    padding: 80px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+              url('/img/rooftop-solar.jpg');
+    color: #fff;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    color: #aaa;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 30px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: #ffcc00; 
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: #ffcc00; 
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.service-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #ffcc00;
+    border: 1px solid #ffcc00;
+    padding: 5px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  background-color:#ffcc00; 
+  color: #000;
+  font-weight: 600;
+  font-size: 15px;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  border-radius: 15px;
+}
+.main:hover{
+  color: black;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  * {
+    box-sizing: border-box;
+    max-width: 100%; 
+}
+
+html, body {
+    overflow-x: hidden; 
+    margin: 0;
+    padding: 0;
+}
+   header {
+        height: auto;
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center;
+        gap: 20px; 
+        padding: 20px 10px; 
+        width: 100%;
+    }
+
+    
+    header nav {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 15px; 
+        width: 100%;
+    }
+
+    header a {
+        margin: 0;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    .logo {
+        margin-bottom: 5px; 
+        display: block;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .modal-content {
+        margin: 10% auto;
+        width: 90%;
+        padding: 20px;
+    }
+}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem; 
+        line-height: 1.2;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .hero {
+        padding: 40px 10px;
+    }
+    
+    
+    section {
+        padding: 30px 10px;
+    }
+}
